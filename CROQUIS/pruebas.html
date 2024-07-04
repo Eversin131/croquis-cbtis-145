@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        /* Estilos CSS opcionales para el div */
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorDiv">Haz clic en el botón para cambiar el color de fondo de este div.</div>
+    <!-- Botón que, al hacer clic, cambiará el color de fondo del div -->
+    <button onclick="cambiarColorDeFondo()">Cambiar Color de Fondo</button>
+
+    <script>
+        function cambiarColorDeFondo() {
+            const colorSquare = document.getElementById('colorDiv');
+            const colores = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            colorSquare.style.backgroundColor = colorAleatorio;
+        }
+    </script>
+</body>
+</html>
